@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <title th:if="${title}" th:text="${title}"></title>
+    <title th:unless="${title}">小郭测试</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script
+      th:if="${jsAdapterAddress}"
+      th:src="${jsAdapterAddress}"
+    ></script>
+    <script
+      th:unless="${jsAdapterAddress}"
+      src="//assets.zjzwfw.gov.cn/assets/ZWJSBridge/1.0.0/zwjsbridge.js"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

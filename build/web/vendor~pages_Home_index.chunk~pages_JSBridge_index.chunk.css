@@ -1,0 +1,14 @@
+.rax-view-v2 {
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+   flex-shrink: 0;
+   align-content: flex-start;
+   border: 0 solid black;
+   margin: 0;
+   padding: 0;
+   min-width: 0;
+}
+
+
+/*# sourceMappingURL=vendor~pages_Home_index.chunk~pages_JSBridge_index.chunk.css.map*/
