@@ -2,7 +2,7 @@
 
 ## 开始使用
 
-### `npm run start`
+### `npm run start` or `npm start`
 
 开发模式下运行应用
 
@@ -12,6 +12,10 @@
 ### `npm run build`
 
 编译代码，编译后的工程
+
+### `fie pack`
+
+把项目压缩成zip文件 或者 使用压缩工具（比如2345好压工具）把项目压缩成zip文件
 
 ## 查看文档
 
