@@ -26,6 +26,26 @@ export default function Home() {
       }
     });
   };
+  const getUserInfo = () => {
+    // ZWJSBridge.getUserType().then((result) => {
+    //   console.log(result);
+    // }).catch((error) => {
+    //   console.log(error);
+    // });
+    mgop({
+      api: 'mgop.login.test.ticketValidation', // 必须
+      dataType: 'JSON',
+      host: 'http://47.96.150.251:8068',
+      type: 'GET',
+      appKey: 'cfwxyj5m+2001101297+eylalq', // 必须
+      onSuccess: data => {
+        console.log('data', data)
+      },
+      onFail: err => {
+        console.log(err, 'err')
+      }
+    });
+  };
 
   const urlParam = {
     paramOne: 123,
@@ -49,21 +69,20 @@ export default function Home() {
   console.log(env)
   // 支付宝入口
   // 登陆地址：https://puser.zjzwfw.gov.cn/sso/alipay.do?action=ssoLogin&servicecode=【接入代码】&goto=【附带跳转地址，以sp参数返回】
-  let src = 'https://gkt.kingyi.net/xihuszgk/login.jspx'
+  // let src = 'https://gkt.kingyi.net/xihuszgk/login.jspx'
+  let src = 'http://192.168.0.75:9521'
+  // let src = 'https://www.yrwcc.cn/ajspx'
   // APP入口
   // 登录地址：https://puser.zjzwfw.gov.cn/sso/mobile.do?action=oauth&scope=1&servicecode=【接入代码】&goto=【附带跳转地址，以sp参数返回】
   if (false)  { // 支付宝入口
-    src = `https://puser.zjzwfw.gov.cn/sso/alipay.do?action=ssoLogin&servicecode=&goto=https://www.yrwcc.cn/ajspx`
+    // src = `https://puser.zjzwfw.gov.cn/sso/alipay.do?action=ssoLogin&servicecode=ncjtszgk&goto=https://www.yrwcc.cn/ajspx`
   } else { // APP入口
-    src = `https://puser.zjzwfw.gov.cn/sso/mobile.do?action=oauth&scope=1&servicecode=&goto=https://www.yrwcc.cn/ajspx`
+    // src = `https://puser.zjzwfw.gov.cn/sso/mobile.do?action=oauth&scope=1&servicecode=ncjtszgk&goto=http://192.168.0.75:9521`
   }
   // 如何判断是否是支付宝入口还是浙里办app入口
   return (
     <View>
-      {/* <Text onClick={() => mgopRequest()}>小郭测试 mgop 通信</Text>
-      <Text>小郭测试</Text>
-      <textarea></textarea>
-      <Link href=" https://www.baidu.com/">百度</Link> */}
+      {/*<Link href=" https://www.baidu.com/">百度</Link> */}
       <Embed id="main-frame" urlParam={urlParam} src={src} useIframeInWeb={true} style={{
         height: window.innerHeight + 'px',
         width: '100%'
