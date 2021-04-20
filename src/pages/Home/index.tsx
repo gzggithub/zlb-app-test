@@ -75,13 +75,13 @@ export default function Home() {
   // APP入口
   // 登录地址：https://puser.zjzwfw.gov.cn/sso/mobile.do?action=oauth&scope=1&servicecode=【接入代码】&goto=【附带跳转地址，以sp参数返回】
   if (false)  { // 支付宝入口
-    // src = `https://puser.zjzwfw.gov.cn/sso/alipay.do?action=ssoLogin&servicecode=ncjtszgk&goto=https://www.yrwcc.cn/ajspx`
+    // src = `https://puser.zjzwfw.gov.cn/sso/alipay.do?action=ssoLogin&servicecode=&goto=`
   } else { // APP入口
     src = `https://puser.zjzwfw.gov.cn/sso/mobile.do` +
       `?action=oauth` +
       `&scope=1` +
-      `&servicecode=ncjtszgk` +
-      `&goto=https://gkt.kingyi.net/xihuszgk/login.jspx`
+      `&servicecode=n` +
+      `&goto=`
   }
   // 如何判断是否是支付宝入口还是浙里办app入口
   return (
