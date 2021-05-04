@@ -54,9 +54,7 @@ export default function Home() {
   console.log(window.location.href)
   console.log(window.innerHeight)
   // const src = 'https://taobao.com'
-  // const src = 'https://www.yrwcc.cn/ajspx'
   // const src = 'https://www.baidu.com/'
-  // const src = 'http://192.168.0.248:8895/'
   // 通过iframe获取子页面的title 同步H5的标题
   // componentDidMount() {
   //   var mainFrame= document.getElementById('main-frame');
@@ -69,8 +67,6 @@ export default function Home() {
   console.log(env)
   // 支付宝入口
   // 登陆地址：https://puser.zjzwfw.gov.cn/sso/alipay.do?action=ssoLogin&servicecode=【接入代码】&goto=【附带跳转地址，以sp参数返回】
-  // let src = 'https://gkt.kingyi.net/xihuszgk/login.jspx'
-  // let src = 'https://www.yrwcc.cn/ajspx'
   let src = ''
   // APP入口
   // 登录地址：https://puser.zjzwfw.gov.cn/sso/mobile.do?action=oauth&scope=1&servicecode=【接入代码】&goto=【附带跳转地址，以sp参数返回】
